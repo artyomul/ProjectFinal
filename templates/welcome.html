@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>English vocabulary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  min-width: 250px;
+}
+/* header */
+.header {
+  background-color: black;
+  padding: 30px 40px;
+  color: white;
+  text-align: center;
+}
+
+</style>
+</head>
+<body>
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">my English vocabulary</h2>
+  <form action="" method="POST">
+    {% if not user.is_authenticated %}
+      <a href="{% url 'login' %}">Login</a>
+      <a href= "{% url 'register' %}">Register</a>
+    {% else %}
+      <a href= "{% url 'logout' %}">Logout</a>
+    {% endif %}
+  </form>
+</div>
+</body>
+</html>
